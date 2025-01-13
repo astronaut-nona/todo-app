@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Todo app </title>
+    <link rel="stylesheet" href="./main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="task-input">
+        <input type="text" 
+        placeholder="Add a new task" 
+        id="task-input" 
+        onkeyup="addTask(event)"/>
+      </div>
+
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        
+
+        <button class="clear-btn" id="clear-all"
+        onclick="clearAllTask()"
+        >Clear All</button>
+      </div>
+      <ul class="task-box" 
+      id="todos" 
+      ondrop="drop(event)" 
+      ondragover="allowDrop(event)"></ul>
+        </div>
+
+        
+          <img
+          id="toggle-dark-mode" class="dark-mode-btn" 
+          width="32" height="32" 
+          src="https://img.icons8.com/external-outline-berkahicon/64/external-dark-mix-ui-social-media-outline-berkahicon.png" 
+          alt="dark-mode"/>
+           <script src="./app.js"></script>
+        
+  </body>
+</html>
